@@ -61,8 +61,6 @@ footer{
   display: flex;
   justify-content: center;
   list-style-type: none;
-  padding-left: 600px;
-  padding-right: 600px;
 }
 .footerNav ul li a{
   color: white;
