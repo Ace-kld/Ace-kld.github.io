@@ -11,28 +11,37 @@
 </head>
 <body>
 
-  <!--navbar-->
-  <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+<!--navbar-->
+  <nav class="navbar bg-dark fixed-top">
     <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        <img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/386842978_1299971637337416_6760285276840566221_n.png?stp=dst-png_p480x480&_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHlwW68xjvnI0cFPZCbmapkb_TL0drTkPlv9MvR2tOQ-VoP3Vy2s5OrrNGNT3aIndaYdlnyH_ZRLvsHBzSEr6dA&_nc_ohc=12-8l58Sfq4AX9Qxmdv&_nc_ht=scontent.fmnl4-2.fna&oh=03_AdQLcoeTsB-4irkNxIxH8AqJW6w-BmYz_jcnPOS8PH5ucw&oe=657BB3AE" alt="ByteLabs" style="width:160px"></a>
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="portfolio.html">Profile</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="portfolio.html#works">Projects</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="portfolio.html#contact">Contact Us</a>
-        </li>
-      </ul>
+      <a class="navbar-brand" href="index.html"><img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/386842978_1299971637337416_6760285276840566221_n.png?stp=dst-png_p480x480&_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHlwW68xjvnI0cFPZCbmapkb_TL0drTkPlv9MvR2tOQ-VoP3Vy2s5OrrNGNT3aIndaYdlnyH_ZRLvsHBzSEr6dA&_nc_ohc=12-8l58Sfq4AX9Qxmdv&_nc_ht=scontent.fmnl4-2.fna&oh=03_AdQLcoeTsB-4irkNxIxH8AqJW6w-BmYz_jcnPOS8PH5ucw&oe=657BB3AE" style="width: 160px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/386842978_1299971637337416_6760285276840566221_n.png?stp=dst-png_p480x480&_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHlwW68xjvnI0cFPZCbmapkb_TL0drTkPlv9MvR2tOQ-VoP3Vy2s5OrrNGNT3aIndaYdlnyH_ZRLvsHBzSEr6dA&_nc_ohc=12-8l58Sfq4AX9Qxmdv&_nc_ht=scontent.fmnl4-2.fna&oh=03_AdQLcoeTsB-4irkNxIxH8AqJW6w-BmYz_jcnPOS8PH5ucw&oe=657BB3AE" style="width: 160px;"></a></h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body" style="text-align: center;">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html">Profile</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html#works">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="portfolio.html#contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
-
 
 <!-- Carousel -->
 <div id="demo" class="carousel slide smaller" data-bs-ride="carousel">

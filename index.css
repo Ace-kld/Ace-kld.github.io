@@ -4,26 +4,22 @@ body {
 }
 .offcanvas {
   background-color: #343a40; /* Change this color to match your bg-dark color */
-  color: #fff; /* Change text color to contrast */
-}
-.white-toggler {
-  color: #343a40;
-  background-color: white;
-  border-color: ; /
-}
-.white-toggler:hover {
-  background-color: #DC4C64;
-  color: black;
 }
 .offcanvas-body .nav-link {
   color: white; 
 }
-
 .offcanvas-body .nav-link:hover {
+  color: #DC4C64;
+}
+.navbar-toggler {
+  color: black;
+  background-color: white;
+}
+.navbar-toggler:hover 
+{
+  background-color: #DC4C64;
   color: white;
 }
-
-
 
 /***** Footer *****/
 footer{
@@ -93,16 +89,22 @@ footer{
   margin: 0px 5px;
 }
 @media (max-width: 700px){
-  .footerNav ul{flex-direction: column;}
+  .footerNav ul
+  {flex-direction:column;
+  justify-content: center; 
+  padding: 0;}
+
+  .footerNav ul 
+  {justify-content: center;}
+
+  }
   .footerNav ul li{
     width: 100%;
     text-align: center;
-    margin: 10px;
+    margin: 10px 0;
+    justify-content: center;
   }
-}
+
 /***** End Footer *****/
 
 
-body {
-  text-align: center;
-}
