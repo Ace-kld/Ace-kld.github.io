@@ -1,25 +1,5 @@
 /***** NAVBAR *****/
-body {
-  margin-top: 60px;
-}
-.offcanvas {
-  background-color: #343a40; /* Change this color to match your bg-dark color */
-}
-.offcanvas-body .nav-link {
-  color: white; 
-}
-.offcanvas-body .nav-link:hover {
-  color: #DC4C64;
-}
-.navbar-toggler {
-  color: black;
-  background-color: #fff;
-}
-.navbar-toggler:hover 
-{
-  background-color: #DC4C64;
-  color: white;
-}
+
 
 /***** Footer *****/
 footer{
