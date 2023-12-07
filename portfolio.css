@@ -7,6 +7,7 @@ body {
 }
 .offcanvas-body .nav-link {
   color: white; 
+  font-size: large;
 }
 .offcanvas-body .nav-link:hover {
   color: #DC4C64;
