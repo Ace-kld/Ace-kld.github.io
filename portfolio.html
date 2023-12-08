@@ -11,16 +11,16 @@
 </head>
 <body>
 <!--navbar-->
-<nav class="navbar bg-dark fixed-top">
+<nav class="navbar navbar-expand-lg bg-dark fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html"><img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/386842978_1299971637337416_6760285276840566221_n.png?stp=dst-png_p480x480&_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHlwW68xjvnI0cFPZCbmapkb_TL0drTkPlv9MvR2tOQ-VoP3Vy2s5OrrNGNT3aIndaYdlnyH_ZRLvsHBzSEr6dA&_nc_ohc=12-8l58Sfq4AX9Qxmdv&_nc_ht=scontent.fmnl4-2.fna&oh=03_AdQLcoeTsB-4irkNxIxH8AqJW6w-BmYz_jcnPOS8PH5ucw&oe=657BB3AE" style="width: 160px;"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-      <div class="offcanvas-header">
+      <div class="offcanvas-header border-bottom">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel"><img src="https://scontent.fmnl4-2.fna.fbcdn.net/v/t1.15752-9/386842978_1299971637337416_6760285276840566221_n.png?stp=dst-png_p480x480&_nc_cat=105&ccb=1-7&_nc_sid=8cd0a2&_nc_eui2=AeHlwW68xjvnI0cFPZCbmapkb_TL0drTkPlv9MvR2tOQ-VoP3Vy2s5OrrNGNT3aIndaYdlnyH_ZRLvsHBzSEr6dA&_nc_ohc=12-8l58Sfq4AX9Qxmdv&_nc_ht=scontent.fmnl4-2.fna&oh=03_AdQLcoeTsB-4irkNxIxH8AqJW6w-BmYz_jcnPOS8PH5ucw&oe=657BB3AE" style="width: 160px;"></a></h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <button type="button" class="btn-close btn-close-white shadow-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body" style="text-align: center;">
         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
@@ -28,10 +28,10 @@
             <a class="nav-link" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="portfolio.html">Profile</a>
+            <a class="nav-link" href="portfolio.html#main">Profile</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="portfolio.html#works">Projects</a>
+            <a target="_parent" class="nav-link" href="portfolio.html#works">Projects</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="portfolio.html#contact">Contact Us</a>
@@ -186,7 +186,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="section-title text-center">
-            <h2 class="fw-bold mb-5">Latest Works</h2>
+            <h2 class="fw-bold mb-5" style="margin-top: 20px;">Latest Works</h2>
           </div>
          </div>
        </div>
@@ -329,6 +329,49 @@
     </div>
   </div>
 </footer>
+
+ <!-- JavaScript libraries (jQuery and Bootstrap) -->
+ <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+ <script>$(document).ready(function(){
+  // Function to handle both navigation and closing the offcanvas
+  function navigateAndCloseOffcanvas(link) {
+    $('.offcanvas').offcanvas('hide'); // Close the offcanvas
+    $('.offcanvas-backdrop').remove(); // Remove the offcanvas backdrop
+    $('body').removeClass('offcanvas-open'); // Remove offcanvas-open class from body
+    $('body').css('overflow', 'auto'); // Restore body's overflow property
+
+    // Navigate to the link's href after a short delay (to ensure offcanvas closes first)
+    setTimeout(function() {
+      window.location.href = link.attr('href');
+    }, 300); // Adjust the delay time as needed
+  }
+
+  // Click event for navbar links
+  $('.navbar-nav a').on('click', function(e){
+    e.preventDefault(); // Prevent the default action of link click
+    var link = $(this); // Store the link that was clicked
+    navigateAndCloseOffcanvas(link); // Call the function to close offcanvas and navigate
+  });
+
+  // Click event for close button
+  $('.btn-close').on('click', function(){
+    $('.offcanvas').offcanvas('hide'); // Close the offcanvas when the close button is clicked
+    $('.offcanvas-backdrop').remove(); // Remove the offcanvas backdrop
+    $('body').removeClass('offcanvas-open'); // Remove offcanvas-open class from body
+    $('body').css('overflow', 'auto'); // Restore body's overflow property
+  });
+
+  // Hide the offcanvas after it's hidden (for mobile devices)
+  $('.offcanvas').on('hidden.bs.offcanvas', function () {
+    $(this).removeClass('show');
+  });
+});
+</script>
+
+
+
 <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
